@@ -1,0 +1,9 @@
+{% extends 'weatherapp/base.html' %}
+{% block body %}
+<form   action="{% url 'home' %}" method="post">
+    <input type="text" name="name">
+
+    {% csrf_token %}
+    <input type ="submit"  value="Search">
+           </form>
+{% endblock %}
