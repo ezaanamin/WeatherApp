@@ -1,0 +1,21 @@
+{% extends 'weatherapp/base.html' %}
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+<div class="jumbotron col-sm-8 col-lg-8 col-md-8" style="background-image: url(https://cdn.wallpapersafari.com/43/82/FIAKhB.jpg)">
+
+    <h1 style="color:purple">City:{{api.list.0.name}}</h1>
+    <h3 style="color: White">Temperture:{{api.list.0.main.temp}}°C</h3>
+    <h3 style="color: White">MinimumTemperture:{{api.list.0.main.temp_min}}°C </h3>
+     <h3 style="color: White">Maximum-Temperture:{{api.list.0.main.temp_max}}°C </h3>
+    <h3 style="color: White">Pressure:{{api.list.0.main.pressure}} </h3>
+    <h3 style="color: White">Humidity:{{api.list.0.main.humidity}} </h3>
+    <h3 style="color:white">Description:{{api.list.0.weather.0.description}}</h3>
+       <img src="http://openweathermap.org/img/w/{{api.list.0.weather.0.icon}}.png"alt="Image">
+
+
+
+</div>
+    </div>
+        </div>
+{% endblock %}
